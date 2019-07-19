@@ -10,7 +10,7 @@ export const ADDING_SMURF_FAILURE = "ADDING_SMURF_FAILURE";
 export const getSmurfs = () => dispatch => {
   dispatch({ type: FETCHING_SMURFS });
   axios
-    .get('http://localhost:3333/smurfs')
+    .get(`http://localhost:3333/smurfs`)
     .then(response => {
       dispatch({
           type: FETCHING_SMURFS_SUCCESS,
